@@ -1,0 +1,6 @@
+{
+  "name": "ImpactPulse",
+  "description": "Local Headlines. Real Action. Instant Impact. Gamified civic action platform transforming local news into verified community impact.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

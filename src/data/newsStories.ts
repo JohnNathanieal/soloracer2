@@ -1,0 +1,392 @@
+import { NewsStory, CityPreset } from '../types/impact';
+
+export const CITY_PRESETS: CityPreset[] = [
+  { id: 'thrissur', name: 'Thrissur', state: 'Kerala', lat: 10.5276, lng: 76.2144 },
+  { id: 'kochi', name: 'Kochi', state: 'Kerala', lat: 9.9312, lng: 76.2673 },
+  { id: 'bengaluru', name: 'Bengaluru', state: 'Karnataka', lat: 12.9716, lng: 77.5946 },
+  { id: 'delhi', name: 'New Delhi', state: 'NCR', lat: 28.6139, lng: 77.2090 },
+  { id: 'mumbai', name: 'Mumbai', state: 'Maharashtra', lat: 19.0760, lng: 72.8777 },
+];
+
+export const MOCK_NEWS_STORIES: NewsStory[] = [
+  {
+    id: 'story-thrissur-canal',
+    headline: 'Plastic Waste Clogs Kuranchery Canal: Pre-Monsoon Flash Flood Threat Issued',
+    category: 'environmental',
+    urgency: 'Urgent',
+    locationName: 'Kuranchery, Thrissur',
+    coordinates: { lat: 10.5512, lng: 76.2215 },
+    summary:
+      'Over 4 tons of single-use plastics and packaging debris have choked the primary drainage tributary near Wadakkanchery road, prompting emergency disaster management alerts.',
+    fullContent: [
+      'An alarming accumulation of non-biodegradable commercial waste and domestic plastic bags has blocked the vital Kuranchery canal outlet, reducing stormwater flow by over 70%.',
+      'The District Disaster Management Authority (DDMA) warned that even 30mm of sudden rainfall could inundate low-lying residential clusters across Ward 12 and 14.',
+      'Civic workers have mobilized two excavator teams, but municipal engineers urge residents to halt domestic dumping and join citizen monitoring squads to clear tributary grates before evening monsoon rains arrive.',
+    ],
+    sourceAgency: 'Thrissur Civic Sentinel & DDMA',
+    timestamp: '25 mins ago',
+    readingTimeMinutes: 2,
+    pointsReward: 50,
+    imageUrl: 'https://images.unsplash.com/photo-1621451537084-482c73073a0f?auto=format&fit=crop&w=800&q=80',
+    geofenceRadiusKm: 20,
+    helpYourself: {
+      title: 'Monsoon Flash Flood Safety Protocol',
+      summary: 'Immediate personal precautions for residents living within 1.5 km of Kuranchery canal.',
+      checklist: [
+        { id: 'hy-1', text: 'Elevate electrical appliances and critical documents at least 3 feet above ground floor level.', category: 'Safety' },
+        { id: 'hy-2', text: 'Inspect and clear immediate household rainwater downspouts and perimeter drains.', category: 'Preparedness' },
+        { id: 'hy-3', text: 'Store 10 liters of boiled drinking water and charge emergency solar or battery lanterns.', category: 'Health' },
+        { id: 'hy-4', text: 'Avoid wading through stagnant canal backflow to prevent leptospirosis (rat fever).', category: 'Medical' },
+      ],
+      emergencyContacts: [
+        { label: 'Thrissur DDMA Control Room', phone: '0487-2362424', actionNote: '24/7 Flood Inundation SOS' },
+        { label: 'Wadakkanchery Fire & Rescue', phone: '101 / 04884-232101', actionNote: 'Water Extraction & Relief' },
+      ],
+    },
+    helpCommunity: {
+      petition: {
+        id: 'pet-thrissur-canal',
+        title: 'Mandate Permanent Trash Booms & Strict CCTV Fines on Kuranchery Canal',
+        department: 'Thrissur District Collectorate & Irrigation Dept',
+        currentSignatures: 1842,
+        targetSignatures: 2500,
+        statement: 'We demand floating trash booms at 3 strategic intake points and automated CCTV surveillance with ₹10,000 penalties for illegal commercial waste dumping.',
+      },
+      volunteerPledge: {
+        id: 'pledge-thrissur-canal',
+        title: 'Canal Cleanliness Citizen Pledge',
+        description: 'Commit your personal contribution to preventing waterway chokeholds.',
+        pledgeOptions: [
+          'I pledge to segregate 100% dry plastic waste and hand over exclusively to Haritha Karma Sena.',
+          'I commit to 2 hours of citizen canal-bank cleanup this Saturday morning.',
+          'I will report illegal waste dumpers using the local municipal citizen portal.',
+        ],
+      },
+      verifiedHotline: {
+        title: 'Thrissur Green Task Force WhatsApp Tip-line',
+        number: '+91 94470 12345',
+        whatsappMessage: 'Reporting canal blockage / dumping near Kuranchery bridge. Coordinates:',
+        description: 'Send photos with GPS location directly to the nodal sanitation inspector.',
+      },
+      civicReportTip: 'Take a geotagged photo of clogged drainage grates along Wadakkanchery road.',
+    },
+    quiz: [
+      {
+        question: 'By what percentage has stormwater flow been reduced due to the Kuranchery canal blockage?',
+        options: ['Approximately 30%', 'Over 70%', 'Less than 15%', 'Exactly 95%'],
+        correctIndex: 1,
+        explanation: 'The report highlights that non-biodegradable waste reduced stormwater flow by over 70%.',
+      },
+      {
+        question: 'Which disease risk is specifically highlighted when wading through canal backflow?',
+        options: ['Malaria', 'Leptospirosis (Rat Fever)', 'Cholera only', 'Typhoid only'],
+        correctIndex: 1,
+        explanation: 'Health authorities caution against leptospirosis exposure in contaminated urban floodwater.',
+      },
+    ],
+  },
+  {
+    id: 'story-kochi-causeway',
+    headline: 'Hazardous Crater Pothole Cluster on MG Road Causeway Triggers Commuter Alerts',
+    category: 'civic_safety',
+    urgency: 'Urgent',
+    locationName: 'MG Road, Kochi',
+    coordinates: { lat: 9.9674, lng: 76.2845 },
+    summary:
+      'Three consecutive 1.2-meter wide craters near the South Overbridge causeway have resulted in 4 two-wheeler skids in 36 hours during night rain.',
+    fullContent: [
+      'Heavy freight movement combined with leaky underground utility pipes has caused asphalt collapse on the northbound lane of MG Road near the South Overbridge.',
+      'Local traffic police have placed temporary reflective cones, but heavy spray from passing transport buses frequently dislodges warning markers.',
+      'Citizen volunteers have begun painting high-contrast white retro-reflective rings around the potholes while demanding overnight cold-mix bituminous patching before Monday peak rush.',
+    ],
+    sourceAgency: 'Kochi Urban Transit Watch & Traffic Police',
+    timestamp: '42 mins ago',
+    readingTimeMinutes: 2,
+    pointsReward: 60,
+    imageUrl: 'https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&w=800&q=80',
+    geofenceRadiusKm: 18,
+    helpYourself: {
+      title: 'Causeway Night Transit & Pothole Navigation Guide',
+      summary: 'Essential tactical survival rules for two-wheeler and four-wheeler commuters.',
+      checklist: [
+        { id: 'hy-k1', text: 'Reduce vehicle speed to under 25 km/h between South Overbridge and Jos Junction.', category: 'Driving' },
+        { id: 'hy-k2', text: 'Maintain a 3-second buffer distance from heavy trucks to avoid hidden flooded craters.', category: 'Transit' },
+        { id: 'hy-k3', text: 'Ensure low-beam fog lights or clean headlights are active during evening precipitation.', category: 'Equipment' },
+        { id: 'hy-k4', text: 'Use alternate detour via Chittoor Road or Subhash Bose Park connector during peak rush.', category: 'Route' },
+      ],
+      emergencyContacts: [
+        { label: 'Kochi Traffic Police Emergency Desk', phone: '0484-2391000', actionNote: 'Immediate Hazard & Towing Assistance' },
+        { label: 'Kochi Corporation Road Maintenance Cell', phone: '0484-2369007', actionNote: 'PWD Repair Escalations' },
+      ],
+    },
+    helpCommunity: {
+      petition: {
+        id: 'pet-kochi-causeway',
+        title: 'Emergency 24-Hour Cold-Mix Patching & Road Safety Audit for MG Road',
+        department: 'Kerala Public Works Department (PWD Roads Division)',
+        currentSignatures: 3120,
+        targetSignatures: 4000,
+        statement: 'We demand immediate overnight bituminous repair of MG Road causeway craters and independent durability testing of contractor asphalt.',
+      },
+      volunteerPledge: {
+        id: 'pledge-kochi-causeway',
+        title: 'Commuter Road Hazard Spotter Pledge',
+        description: 'Support fellow citizens by flagging active road hazards before accidents occur.',
+        pledgeOptions: [
+          'I will warn fellow commuters by tagging road craters on OpenStreetMaps and civic channels.',
+          'I pledge to ride below 30 km/h on wet causeway stretches and wear a certified helmet.',
+          'I commit to joining the civic spot-painting drive this Sunday evening.',
+        ],
+      },
+      verifiedHotline: {
+        title: 'Kochi Smart City Pothole SOS Bot',
+        number: '+91 94474 44555',
+        whatsappMessage: 'CRATER ALERT: MG Road Northbound lane near South Overbridge. Urgency: High',
+        description: 'Auto-logs ticket in Corporation PWD ticketing portal with tracking ID.',
+      },
+      civicReportTip: 'Pinpoint exact lane location (left curb vs center median) to speed up repair teams.',
+    },
+    quiz: [
+      {
+        question: 'Where is the hazardous pothole crater cluster located on MG Road?',
+        options: ['Near Marine Drive Walkway', 'Near South Overbridge causeway', 'At Edappally Toll', 'Near Fort Kochi Ferry'],
+        correctIndex: 1,
+        explanation: 'The news specifies the asphalt collapse occurred on the northbound lane near the South Overbridge.',
+      },
+      {
+        question: 'What immediate remedial action are citizen volunteers undertaking?',
+        options: ['Digging trenches', 'Painting high-contrast white retro-reflective rings', 'Blocking traffic entirely', 'Planting trees on the road'],
+        correctIndex: 1,
+        explanation: 'Volunteers have been painting reflective rings to warn oncoming night riders before asphalt patching.',
+      },
+    ],
+  },
+  {
+    id: 'story-bengaluru-lake',
+    headline: 'Bellandur & Varthur Catchment Toxic Foam Flare-Up: Air & Water Quality Advisory',
+    category: 'environmental',
+    urgency: 'High',
+    locationName: 'Bellandur-Varthur, Bengaluru',
+    coordinates: { lat: 12.9365, lng: 77.6789 },
+    summary:
+      'Sudden discharge of untreated industrial surfactants has generated 1.8-meter thick chemical foam plumes spilling across the Yamalur and Bellandur wetland bridges.',
+    fullContent: [
+      'Residents of Yamalur and Kempapura reported acrid sulfurous odors and dense white foam clouds drifting across arterial roads following midnight upstream stormwater surges.',
+      'The Karnataka State Pollution Control Board (KSPCB) detected surfactant concentrations nearly 8 times above safe environmental thresholds.',
+      'Health clinics in Bellandur reported a 40% jump in skin irritation and respiratory distress among school commuters and street vendors operating near the weir outlets.',
+    ],
+    sourceAgency: 'Bengaluru Lakes Task Force & KSPCB',
+    timestamp: '1 hour ago',
+    readingTimeMinutes: 3,
+    pointsReward: 75,
+    imageUrl: 'https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=800&q=80',
+    geofenceRadiusKm: 25,
+    helpYourself: {
+      title: 'Chemical Foam & Aerosol Exposure Protection Protocol',
+      summary: 'Practical health precautions for residents, tech park commuters, and school routes.',
+      checklist: [
+        { id: 'hy-b1', text: 'Wear N95/FFP2 respirator masks when traveling within 500 meters of Yamalur or Bellandur weirs.', category: 'Respiratory' },
+        { id: 'hy-b2', text: 'Keep all apartment and home balcony doors sealed between 6 PM and 9 AM when thermal inversions trap foam aerosols.', category: 'Indoor Air' },
+        { id: 'hy-b3', text: 'Wash skin thoroughly with mild soap immediately if splashed with airborne water mist or foam residue.', category: 'Dermatology' },
+        { id: 'hy-b4', text: 'Run HEPA air purifiers on continuous recirculate mode in ground floor bedrooms.', category: 'Health' },
+      ],
+      emergencyContacts: [
+        { label: 'BBMP Lake Conservation Cell', phone: '080-22660000', actionNote: 'Aerator Defoamer Deployment' },
+        { label: 'KSPCB Environmental Helpline', phone: '1800-425-4525', actionNote: 'Illegal Effluent Discharge Reporting' },
+      ],
+    },
+    helpCommunity: {
+      petition: {
+        id: 'pet-bengaluru-lake',
+        title: 'Install Real-Time Effluent Monitoring at Upstream Industrial Drains',
+        department: 'Minor Irrigation Dept & Karnataka Pollution Control Board',
+        currentSignatures: 5410,
+        targetSignatures: 7500,
+        statement: 'We demand 24/7 public telemetry sensors and criminal prosecution for detergent manufacturing units illegally dumping into storm drains.',
+      },
+      volunteerPledge: {
+        id: 'pledge-bengaluru-lake',
+        title: 'Lake Guardian Citizen Pledge',
+        description: 'Help monitor upstream feeders and promote eco-friendly detergents.',
+        pledgeOptions: [
+          'I pledge to switch to zero-phosphate, biodegradable laundry detergents at home.',
+          'I commit to logging weekly water clarity and odor observations on the citizen lake portal.',
+          'I will support wetland buffer tree-planting drives along the lake rim.',
+        ],
+      },
+      verifiedHotline: {
+        title: 'Bengaluru Lakes Citizen Watchdog Telegram & SOS',
+        number: '+91 80226 67788',
+        whatsappMessage: 'URGENT FOAM SPILL: Observed at Yamalur bridge outlet. Wind direction: East.',
+        description: 'Direct alert sent to lake marshals and civil defense response units.',
+      },
+      civicReportTip: 'Report the specific time and color tint of foam discharges to help track rogue night factories.',
+    },
+    quiz: [
+      {
+        question: 'What level of surfactant concentration was detected compared to the safe threshold?',
+        options: ['Twice as high', 'Roughly equal', 'Nearly 8 times above safe thresholds', '50 times higher'],
+        correctIndex: 2,
+        explanation: 'Testing by KSPCB showed surfactant levels 8x higher than permitted safety limits.',
+      },
+      {
+        question: 'Which mask standard is recommended when within 500 meters of the foam spill?',
+        options: ['Cloth handkerchief', 'N95 / FFP2 respirator mask', 'Surgical paper mask only', 'No mask needed'],
+        correctIndex: 1,
+        explanation: 'Health advisories specify N95 or FFP2 respirators to block fine chemical aerosol droplets.',
+      },
+    ],
+  },
+  {
+    id: 'story-thrissur-blood',
+    headline: 'District Health Centers Issue Critical O+ & B+ Blood Platelet Appeal Amid Dengue Surge',
+    category: 'community_support',
+    urgency: 'Urgent',
+    locationName: 'Round South, Thrissur',
+    coordinates: { lat: 10.5245, lng: 76.2132 },
+    summary:
+      'A sharp increase in post-monsoon dengue hospital admissions has depleted regional blood bank reserves to under 18 hours of emergency supply.',
+    fullContent: [
+      'Government Medical College Thrissur and the General Hospital blood banks issued an urgent combined bulletin requesting healthy adult donors between ages 18 and 50.',
+      'With over 120 dengue patients admitted in the past 48 hours requiring single-donor apheresis platelets, existing voluntary donor rosters are operating at peak capacity.',
+      'The District Health Officer announced extended donor clinic hours through 8:00 PM, complimentary health screenings for all donors, and dedicated transport assistance for donor groups.',
+    ],
+    sourceAgency: 'District Medical Office & Red Cross Thrissur',
+    timestamp: '2 hours ago',
+    readingTimeMinutes: 2,
+    pointsReward: 50,
+    imageUrl: 'https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=800&q=80',
+    geofenceRadiusKm: 25,
+    helpYourself: {
+      title: 'Monsoon Dengue Prevention & Early Warning Indicators',
+      summary: 'Vital steps to safeguard your family and recognize warning signs early.',
+      checklist: [
+        { id: 'hy-d1', text: 'Inspect and drain rooftop trays, flower pot saucers, and discarded tires every Sunday (Dry Day).', category: 'Mosquito Control' },
+        { id: 'hy-d2', text: 'Apply DEET or picaridin-based mosquito repellent during peak Aedes feeding hours (dawn and dusk).', category: 'Protection' },
+        { id: 'hy-d3', text: 'Seek immediate CBC blood test if sudden high fever is accompanied by retro-orbital (behind eye) pain.', category: 'Diagnosis' },
+        { id: 'hy-d4', text: 'Never take aspirin or ibuprofen for suspected dengue without doctor consultation (risk of bleeding).', category: 'Medication' },
+      ],
+      emergencyContacts: [
+        { label: 'Thrissur Medical College Blood Bank', phone: '0487-2200310', actionNote: '24/7 Apheresis & Platelet SOS' },
+        { label: 'Disha Kerala Health Helpline', phone: '1056 / 0471-2552056', actionNote: 'Toll-Free Dengue Guidance' },
+      ],
+    },
+    helpCommunity: {
+      petition: {
+        id: 'pet-thrissur-blood',
+        title: 'Establish Mobile Platelet Collection Vans Across Rural Taluks',
+        department: 'Kerala State Blood Transfusion Council',
+        currentSignatures: 2190,
+        targetSignatures: 3000,
+        statement: 'We urge the health ministry to deploy air-conditioned apheresis mobile vans to college campuses and tech parks to eliminate platelet shortages.',
+      },
+      volunteerPledge: {
+        id: 'pledge-thrissur-blood',
+        title: 'Lifesaver Blood & Platelet Donor Pledge',
+        description: 'Sign up to be contacted when your specific blood group is needed urgently.',
+        pledgeOptions: [
+          'I am eligible and pledge to donate blood/platelets within the next 48 hours.',
+          'I pledge to coordinate a donor drive among my workplace or neighborhood association.',
+          'I commit to conducting a Dry Day mosquito breeding spot inspection on my residential street.',
+        ],
+      },
+      verifiedHotline: {
+        title: 'Thrissur Red Cross Donor Coordinator Desk',
+        number: '+91 94472 88990',
+        whatsappMessage: 'DONOR AVAILABLE: Blood Group [O+/B+/Other]. Available for dispatch within 2 hours.',
+        description: 'Instant coordinator matchmaker for emergency dengue platelet requests.',
+      },
+      civicReportTip: 'Share your blood group on the donor registry to reduce response times for pediatric dengue patients.',
+    },
+    quiz: [
+      {
+        question: 'Which specific blood types were reported in critical emergency shortage?',
+        options: ['AB- and A-', 'O+ and B+', 'Only Bombay Blood Group', 'All negative types only'],
+        correctIndex: 1,
+        explanation: 'The official health bulletin specifically appealed for O+ and B+ donors due to the surge in dengue cases.',
+      },
+      {
+        question: 'Why should aspirin or ibuprofen be avoided in suspected dengue cases?',
+        options: ['They cause drowsiness', 'They increase risk of internal bleeding', 'They neutralize antibiotics', 'They induce dehydration'],
+        correctIndex: 1,
+        explanation: 'Aspirin and NSAIDs inhibit platelet function and increase the risk of hemorrhage in dengue patients.',
+      },
+    ],
+  },
+  {
+    id: 'story-bengaluru-streetlight',
+    headline: 'Critical Streetlight Blackout Along Sarjapur Tech Corridor Bus Shelters Sparks Safety Concerns',
+    category: 'civic_safety',
+    urgency: 'Moderate',
+    locationName: 'Sarjapur Main Road, Bengaluru',
+    coordinates: { lat: 12.9103, lng: 77.6845 },
+    summary:
+      'A 1.6-kilometer stretch between Carmelaram Junction and Doddakannelli has remained completely unlit for 5 consecutive nights, impacting thousands of late-shift commuters.',
+    fullContent: [
+      'Faulty underground feeder cabling damaged during optical fiber trenching has knocked out 42 consecutive LED poles along the busy Sarjapur Tech Corridor.',
+      'Late-night bus commuters and pedestrians waiting at unlit transit shelters reported near-miss collisions with speeding private cabs navigating in pitch darkness.',
+      'A local civic welfare coalition has instituted a citizen escort squad while escalating an emergency grievance petition to BESCOM and BBMP electrical executive engineers.',
+    ],
+    sourceAgency: 'Sarjapur Resident Welfare Coalition & City Police',
+    timestamp: '3 hours ago',
+    readingTimeMinutes: 2,
+    pointsReward: 45,
+    imageUrl: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80',
+    geofenceRadiusKm: 20,
+    helpYourself: {
+      title: 'Dark Zone Night Commute Safety Precautions',
+      summary: 'Practical tactical personal safety habits when navigating unlit public transit stretches.',
+      checklist: [
+        { id: 'hy-s1', text: 'Carry a compact high-lumen LED pocket torch or ensure smartphone battery is above 30% before heading home.', category: 'Visibility' },
+        { id: 'hy-s2', text: 'Wait for buses inside illuminated convenience stores or fuel station forecourts rather than dark shelters.', category: 'Safety' },
+        { id: 'hy-s3', text: 'Enable live location sharing on WhatsApp or Google Maps with a trusted family member or roommate.', category: 'Communication' },
+        { id: 'hy-s4', text: 'Avoid wearing noise-cancelling headphones while walking along unlit road shoulders.', category: 'Awareness' },
+      ],
+      emergencyContacts: [
+        { label: 'Bengaluru Police Emergency SOS', phone: '112', actionNote: 'Immediate Hoysala Patrol Dispatch' },
+        { label: 'BESCOM Electrical Helpline', phone: '1912 / 080-22873333', actionNote: 'Cable Breakdown Reporting' },
+      ],
+    },
+    helpCommunity: {
+      petition: {
+        id: 'pet-bengaluru-streetlight',
+        title: 'Restore Sarjapur Tech Corridor Illumination & Fine Negligent Contractors',
+        department: 'BBMP Electrical Division & BESCOM',
+        currentSignatures: 2890,
+        targetSignatures: 3500,
+        statement: 'We demand permanent underground cable replacement within 48 hours and high-visibility solar backup lights at all 6 bus shelters.',
+      },
+      volunteerPledge: {
+        id: 'pledge-bengaluru-streetlight',
+        title: 'Safe Transit Corridor Watch Pledge',
+        description: 'Help make transit corridors secure for evening shift workers and students.',
+        pledgeOptions: [
+          'I pledge to offer safe walk-along escorts for neighborhood commuters from the bus stand.',
+          'I will log each dark pole ID number on the BBMP Sahaaya grievance application.',
+          'I commit to keeping my business or apartment perimeter lights turned outward toward the road.',
+        ],
+      },
+      verifiedHotline: {
+        title: 'Sarjapur Safety Escort & Citizen Patrol Desk',
+        number: '+91 80284 33221',
+        whatsappMessage: 'CORRIDOR ALERT: Streetlight blackout Carmelaram to Doddakannelli. Bus shelter unlit.',
+        description: 'Connects directly with volunteer neighborhood night patrol coordinators.',
+      },
+      civicReportTip: 'Take note of the exact pole serial numbers stenciled in yellow on the metal shafts.',
+    },
+    quiz: [
+      {
+        question: 'What caused the sudden streetlight blackout along Sarjapur Road?',
+        options: ['Power grid strike', 'Damage to underground cabling during optical fiber trenching', 'Bulb theft', 'Scheduled municipal maintenance'],
+        correctIndex: 1,
+        explanation: 'Investigation revealed optical fiber digging damaged underground feeder lines supplying 42 poles.',
+      },
+      {
+        question: 'Which emergency number is recommended for immediate Bengaluru police patrol dispatch?',
+        options: ['100 or 112', '911 only', '108 only', '000'],
+        correctIndex: 0,
+        explanation: 'Unified emergency response in Bengaluru operates via 112 / 100 for immediate Hoysala patrol dispatch.',
+      },
+    ],
+  },
+];
